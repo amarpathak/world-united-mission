@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import logo from "./logo.jpeg";
 
 function App() {
+  const btns = ["Events", "Documents", "Photos", "Audio", "Video"];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="container">
+      <div class="content">
+        <img src={logo} className="logo" alt="logo" />
+        <span className="gradient-text">WORLD UNITED MISSION</span>
+        <div class='btns'>
+          {btns.map((btn) => (
+            <button>{btn}</button>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
